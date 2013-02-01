@@ -1,8 +1,6 @@
 # -*- coding: cp1254 -*-
 
 # Onur Yilmaz
-# 1627868
-# CENG 463 - HW 2
 
 # Imports
 import codecs
