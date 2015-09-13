@@ -43,13 +43,17 @@
  * Considering the relatively small development set, there is a high probability of over fitting. Therefore, accuracy level of this model in unseen data can vary very largely.
  * Although implemented, good source of information about Brill rule templates cannot be found. Therefore, better rule templates can be found or unnecessary ones can be eliminated.
  * Considering Turkish as an agglutinative language, rule based methods can be used as back-off or base stage of Brill tagger. Because adding another affix can mislead the tagger as following:
-| tag('Ali koş !')   | [('Ali', 'Noun_Nom'), ('koş’, 'Verb'), ('!', 'Punc')]       |
-|--------------------|-------------------------------------------------------------|
-| tag('Ali koştu .') | [('Ali', 'Noun_Nom'), ('koştu', 'Noun_Nom'), ('.', 'Punc')] |
+
+| Function Call      	| Tags                                                        	|
+|--------------------	|-------------------------------------------------------------	|
+| tag('Ali koş !')   	| [('Ali', 'Noun_Nom'), ('koş’, 'Verb'), ('!', 'Punc')]       	|
+| tag('Ali koştu .') 	| [('Ali', 'Noun_Nom'), ('koştu', 'Noun_Nom'), ('.', 'Punc')] 	|
 
 ### Conclusion
-* To conclude, when the model is evaluated with random parts from development set, accuracy level is calculated as following: 
-| # of try    | Minimum | Maximum | Average | Std. Dev. |
-|:-----------:|:-------:|:-------:|:-------:|:---------:|
-|      49     |   91%   |   96%   |   95%   |     1%    |
+* To conclude, when the model is evaluated with random parts from development set, accuracy level is calculated as following:
+
+| Sample 	| Minimum 	| Maximum 	| Average 	| Std. Dev. 	|
+|:------:	|:-------:	|:-------:	|:-------:	|:---------:	|
+|   49   	|   91%   	|   96%   	|   95%   	|     1%    	|
+
 * As it is mentioned in “Analysis of Implementation” part, this level of accuracy was expected on random parts of development set. Considering mentioned possible improvements, this model can be enhanced to result with a higher accuracy, especially on tagging unseen sentences.
