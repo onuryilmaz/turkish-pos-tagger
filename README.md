@@ -15,7 +15,7 @@
 ### Implementation Idea
 
 * In this part-of-speech tagger application, a transformation based POS system is implemented. In this approach, transformation-based tagger uses rules to specify which tags are possible for words and supervised learning to examine possible transformations, improvements and re-tagging.
-* Using NLTK functions, tagged corpus provided in [development.sdx] is read for training and validation purposes. Then, this set is randomly divided into training and development with 85% and 15%.
+* Using NLTK functions, tagged corpus provided in [development.sdx](development.sdx) is read for training and validation purposes. Then, this set is randomly divided into training and development with 85% and 15%.
 * As a transformation-based tagger, Brill tagger of NLTK is implemented with maximum rules of 300 and minimum score of 3. Brill tagger uses a general tagging method at the first stage and a trigram tagger is used for that purpose. Back-off stages of this trigram tagger is provided in the next page. Since sufficient information cannot be found about rule templates of Brill tagger, default templates given in [demo code](http://nltk.googlecode.com/svn/trunk/doc/api/nltk.tag.brill-pysrc.html) is directly used.
 * Considering k-fold cross validation, this tagger is trained and its performance is tracked, which will be explained in the next section. Flow of operations is shown as a diagram in the following page.
 ![](img/flow.png)
