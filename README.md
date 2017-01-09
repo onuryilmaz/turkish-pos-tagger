@@ -17,6 +17,18 @@ python training_tagger.py
 [('Bunu', 'Pron'), ('başından', 'Noun_Abl'), ('beri', 'Postp'), ('biliyordum', 'Verb'), ('zaten', 'Adv'), ('.', 'Punc')]
 ```
 
+### Build and Run Using Docker
+```
+docker build -t tagger .
+docker run -it tagger python
+```
+When the shell is opened:
+```
+>>> from pos_tagger import tag
+>>> tag('Bunu başından beri biliyordum zaten .')
+[('Bunu', 'Pron'), ('başından', 'Noun_Abl'), ('beri', 'Postp'), ('biliyordum', 'Verb'), ('zaten', 'Adv'), ('.', 'Punc')]
+```
+
 ### Implementation Idea
 
 * In this part-of-speech tagger application, a transformation based POS system is implemented. In this approach, transformation-based tagger uses rules to specify which tags are possible for words and supervised learning to examine possible transformations, improvements and re-tagging.
