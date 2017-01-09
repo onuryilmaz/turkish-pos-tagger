@@ -28,6 +28,7 @@ When the shell is opened:
 >>> tag('Bunu başından beri biliyordum zaten .')
 [('Bunu', 'Pron'), ('başından', 'Noun_Abl'), ('beri', 'Postp'), ('biliyordum', 'Verb'), ('zaten', 'Adv'), ('.', 'Punc')]
 ```
+![](img/screencast.gif)
 
 ### Implementation Idea
 
