@@ -70,7 +70,7 @@ print trigram_tagger.evaluate(evaulation_data)
 
 # Brill tagger templates
 templates = [
-    brill.Template(brill.Pos([1, 1])),
+    Template(brill.Pos([1, 1])),
     Template(brill.Pos([2, 2])),
     Template(brill.Pos([1, 2])),
     Template(brill.Pos([1, 3])),
