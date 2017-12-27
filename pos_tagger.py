@@ -3,23 +3,12 @@
 # Onur Yilmaz
 
 # Imports
-import codecs
-import locale
-import bisect        
-import random
-import sys
-import yaml           
-import textwrap 
-from nltk.tokenize import BlanklineTokenizer
-from nltk.corpus.reader import TaggedCorpusReader
-from random import shuffle
-from nltk.corpus import treebank 
-from nltk import tag 
-from nltk.tag import brill
- 
+import yaml
+
 # Open the file where tagger is saved
-f=open('my_tagger.yaml')
-myTagger=yaml.load(f)
+f = open('my_tagger.yaml')
+myTagger = yaml.load(f)
+
 
 # Tagger function
 def tag(sentence):
@@ -29,10 +18,10 @@ def tag(sentence):
     # Find tags
     for token in temp:
         return_list.append(myTagger.tag(token))
-    
+
     return_list = [t for [t] in return_list]
     # Correct tags for printing
-    tag_list = [y for (x,y) in return_list]
+    tag_list = [y for (x, y) in return_list]
     tag_list = [(y.lower()).title() for y in tag_list]
 
     # Zip input and tags
@@ -41,4 +30,3 @@ def tag(sentence):
     return temp_list
 
 # End of code
-
