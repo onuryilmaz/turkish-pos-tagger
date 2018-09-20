@@ -5,7 +5,8 @@
  * Python (works with 2.7.11)
  * NLTK (works with 3.2.5)
 * The module is named as `pos_tagger` and for the given sentence `tag(sentence)` will return `(word, tag)` pairs.
-* The system is trained with the development file provided in [CENG463 course](https://cow.ceng.metu.edu.tr/Courses/index.php?course=ceng463&semester=20121) it includes 5110 sentences. For training:
+* The system is trained with the development file provided in [CENG463 course](https://cow.ceng.metu.edu.tr/Courses/index.php?course=ceng463&semester=20121) it includes 5110 sentences. Dataset originally belongs to [Turkish UD treebank](http://tedlab.mit.edu/datasets/cliqs/ud-treebanks-v2.0/tr/).
+* For training:
 ```
 python training_tagger.py
 ```
