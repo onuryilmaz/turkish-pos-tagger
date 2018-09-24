@@ -3,7 +3,7 @@
 # Onur Yilmaz
 
 # Imports
-from .Tagger import Tagger
+from Tagger import Tagger
 
 # Open the file where tagger is saved
 taggerFileName = 'my_tagger.yaml'
